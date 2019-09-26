@@ -1,10 +1,11 @@
+ 
 const mongoose = require('mongoose');
-//destructuring en JS sig nifica que no entrare a todo el objeto solo a la parte { database }
-const { database  } = require('./keys');
+
+const { database } = require('./keys');
 
 mongoose.connect(database.URI, {
-    useNewUrlPrser: true
+  useNewUrlParser: true    
 })
-
-    .then(db => console.log('DB is connected'))
-    .catch(err => console.error(err));
+  .then(db => console.log('db is connected'))
+  .catch(err => console.log(err));
+  
